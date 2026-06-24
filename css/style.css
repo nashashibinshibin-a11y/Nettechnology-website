@@ -2,10 +2,8 @@
    ABC Tech — Premium Visual Design System
    ========================================================= */
 
-/* Satoshi Font via Fontshare */
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
-/* Inter fallback */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Outfit & Plus Jakarta Sans via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 /* =========================================================
    1. CSS CUSTOM PROPERTIES
@@ -44,8 +42,8 @@
   --shadow-hover:   0 20px 50px rgba(15, 98, 254, 0.1);
 
   /* Fonts */
-  --font-heading: 'Satoshi', 'Inter', sans-serif;
-  --font-body:    'Satoshi', 'Inter', sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-body:    'Plus Jakarta Sans', 'Outfit', sans-serif;
 
   /* Transitions */
   --transition-fast:   all 0.2s ease;
@@ -2886,7 +2884,7 @@ a {
 
 /* Premium Solution Cards */
 .solution-card {
-  background: rgba(18, 20, 28, 0.6) !important;
+  background: rgba(18, 20, 28, 0.7) !important;
   border: 1px solid rgba(0, 194, 203, 0.15) !important;
   border-radius: 16px !important;
   padding: 0 !important;
@@ -2909,7 +2907,7 @@ a {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #00C2CB, #1E5BFF, #8A2BE2);
+  background: linear-gradient(90deg, #00C2CB, #0F62FE, #00C2CB);
   transform: scaleX(0);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 10;
@@ -2917,8 +2915,8 @@ a {
 
 .solution-card:hover {
   transform: translateY(-8px) !important;
-  border-color: rgba(30, 91, 255, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(30, 91, 255, 0.25) !important;
+  border-color: rgba(0, 194, 203, 0.5) !important;
+  box-shadow: 0 20px 45px rgba(0, 194, 203, 0.25) !important;
 }
 
 .solution-card:hover::after {
@@ -2948,16 +2946,17 @@ a {
   transform: scale(1.1);
 }
 
+/* Super dark gradient overlay for text readability */
 .solution-card-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(8, 9, 12, 0.1) 0%, rgba(8, 9, 12, 0.65) 50%, rgba(8, 9, 12, 0.98) 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.85) 60%, #08090c 100%) !important;
   z-index: 2;
   transition: all 0.5s ease;
 }
 
 .solution-card:hover .solution-card-img-overlay {
-  background: linear-gradient(to bottom, rgba(8, 9, 12, 0.3) 0%, rgba(8, 9, 12, 0.78) 40%, rgba(8, 9, 12, 1) 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.92) 50%, #08090c 100%) !important;
 }
 
 .solution-card-body {
@@ -2995,7 +2994,8 @@ a {
   font-size: 1.3rem;
   margin-bottom: 0;
   font-weight: 700;
-  color: #F0F4FF;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
   transition: color 0.3s ease;
 }
 
@@ -3045,6 +3045,7 @@ a {
   line-height: 1.5 !important;
   color: var(--text-secondary) !important;
   margin-bottom: 16px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
 }
 
 .solution-card-features {
@@ -3062,6 +3063,7 @@ a {
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
 }
 
 .solution-card-features li i, .solution-card-features li svg {
@@ -3078,6 +3080,7 @@ a {
   align-items: center;
   gap: 6px;
   transition: all 0.3s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
 }
 
 .solution-card-link i, .solution-card-link svg {
@@ -3214,187 +3217,7 @@ a {
   }
 }
 
-/* Themed Solution Card Category Signatures */
-
-/* 1. AV Solutions Card (Teal Glow) */
-.solution-card.card-av {
-  border-color: rgba(0, 194, 203, 0.15) !important;
-}
-.solution-card.card-av::after {
-  background: #00C2CB !important;
-}
-.solution-card.card-av .solution-card-icon-wrapper {
-  color: #00C2CB !important;
-  background: rgba(0, 194, 203, 0.08) !important;
-  border-color: rgba(0, 194, 203, 0.2) !important;
-}
-.solution-card.card-av .solution-card-link {
-  color: #00C2CB !important;
-}
-.solution-card.card-av:hover {
-  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 194, 203, 0.06) 85%) !important;
-  border-color: rgba(0, 194, 203, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(0, 194, 203, 0.22), inset 0 0 25px rgba(0, 194, 203, 0.1) !important;
-}
-.solution-card.card-av:hover .solution-card-icon-wrapper {
-  background: rgba(0, 194, 203, 0.2) !important;
-  border-color: rgba(0, 194, 203, 0.5) !important;
-  box-shadow: 0 0 15px rgba(0, 194, 203, 0.3) !important;
-}
-.solution-card.card-av:hover .solution-card-link {
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(0, 194, 203, 0.5);
-}
-
-/* 2. ELV Systems Card (Electric Royal Blue) */
-.solution-card.card-elv {
-  border-color: rgba(30, 91, 255, 0.15) !important;
-}
-.solution-card.card-elv::after {
-  background: #1E5BFF !important;
-}
-.solution-card.card-elv .solution-card-icon-wrapper {
-  color: #1E5BFF !important;
-  background: rgba(30, 91, 255, 0.08) !important;
-  border-color: rgba(30, 91, 255, 0.2) !important;
-}
-.solution-card.card-elv .solution-card-link {
-  color: #1E5BFF !important;
-}
-.solution-card.card-elv:hover {
-  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(30, 91, 255, 0.06) 85%) !important;
-  border-color: rgba(30, 91, 255, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(30, 91, 255, 0.22), inset 0 0 25px rgba(30, 91, 255, 0.1) !important;
-}
-.solution-card.card-elv:hover .solution-card-icon-wrapper {
-  background: rgba(30, 91, 255, 0.2) !important;
-  border-color: rgba(30, 91, 255, 0.5) !important;
-  box-shadow: 0 0 15px rgba(30, 91, 255, 0.3) !important;
-}
-.solution-card.card-elv:hover .solution-card-link {
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(30, 91, 255, 0.5);
-}
-
-/* 3. ICT Infrastructure Card (Neon Purple/Violet) */
-.solution-card.card-ict {
-  border-color: rgba(138, 43, 226, 0.15) !important;
-}
-.solution-card.card-ict::after {
-  background: #8A2BE2 !important;
-}
-.solution-card.card-ict .solution-card-icon-wrapper {
-  color: #8A2BE2 !important;
-  background: rgba(138, 43, 226, 0.08) !important;
-  border-color: rgba(138, 43, 226, 0.2) !important;
-}
-.solution-card.card-ict .solution-card-link {
-  color: #8A2BE2 !important;
-}
-.solution-card.card-ict:hover {
-  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(138, 43, 226, 0.06) 85%) !important;
-  border-color: rgba(138, 43, 226, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(138, 43, 226, 0.22), inset 0 0 25px rgba(138, 43, 226, 0.1) !important;
-}
-.solution-card.card-ict:hover .solution-card-icon-wrapper {
-  background: rgba(138, 43, 226, 0.2) !important;
-  border-color: rgba(138, 43, 226, 0.5) !important;
-  box-shadow: 0 0 15px rgba(138, 43, 226, 0.3) !important;
-}
-.solution-card.card-ict:hover .solution-card-link {
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
-}
-
-/* 4. Smart Automation Card (Bright Cyan) */
-.solution-card.card-automation {
-  border-color: rgba(0, 229, 255, 0.15) !important;
-}
-.solution-card.card-automation::after {
-  background: #00E5FF !important;
-}
-.solution-card.card-automation .solution-card-icon-wrapper {
-  color: #00E5FF !important;
-  background: rgba(0, 229, 255, 0.08) !important;
-  border-color: rgba(0, 229, 255, 0.2) !important;
-}
-.solution-card.card-automation .solution-card-link {
-  color: #00E5FF !important;
-}
-.solution-card.card-automation:hover {
-  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 229, 255, 0.06) 85%) !important;
-  border-color: rgba(0, 229, 255, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(0, 229, 255, 0.22), inset 0 0 25px rgba(0, 229, 255, 0.1) !important;
-}
-.solution-card.card-automation:hover .solution-card-icon-wrapper {
-  background: rgba(0, 229, 255, 0.2) !important;
-  border-color: rgba(0, 229, 255, 0.5) !important;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3) !important;
-}
-.solution-card.card-automation:hover .solution-card-link {
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
-}
-
-/* 5. Security Systems Card (Neon Red/Pink) */
-.solution-card.card-security {
-  border-color: rgba(255, 50, 100, 0.15) !important;
-}
-.solution-card.card-security::after {
-  background: #FF3264 !important;
-}
-.solution-card.card-security .solution-card-icon-wrapper {
-  color: #FF3264 !important;
-  background: rgba(255, 50, 100, 0.08) !important;
-  border-color: rgba(255, 50, 100, 0.2) !important;
-}
-.solution-card.card-security .solution-card-link {
-  color: #FF3264 !important;
-}
-.solution-card.card-security:hover {
-  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(255, 50, 100, 0.06) 85%) !important;
-  border-color: rgba(255, 50, 100, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(255, 50, 100, 0.22), inset 0 0 25px rgba(255, 50, 100, 0.1) !important;
-}
-.solution-card.card-security:hover .solution-card-icon-wrapper {
-  background: rgba(255, 50, 100, 0.2) !important;
-  border-color: rgba(255, 50, 100, 0.5) !important;
-  box-shadow: 0 0 15px rgba(255, 50, 100, 0.3) !important;
-}
-.solution-card.card-security:hover .solution-card-link {
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(255, 50, 100, 0.5);
-}
-
-/* 6. Specialized Solutions Card (Lime Green) */
-.solution-card.card-specialized {
-  border-color: rgba(50, 205, 50, 0.15) !important;
-}
-.solution-card.card-specialized::after {
-  background: #32CD32 !important;
-}
-.solution-card.card-specialized .solution-card-icon-wrapper {
-  color: #32CD32 !important;
-  background: rgba(50, 205, 50, 0.08) !important;
-  border-color: rgba(50, 205, 50, 0.2) !important;
-}
-.solution-card.card-specialized .solution-card-link {
-  color: #32CD32 !important;
-}
-.solution-card.card-specialized:hover {
-  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(50, 205, 50, 0.06) 85%) !important;
-  border-color: rgba(50, 205, 50, 0.45) !important;
-  box-shadow: 0 20px 45px rgba(50, 205, 50, 0.22), inset 0 0 25px rgba(50, 205, 50, 0.1) !important;
-}
-.solution-card.card-specialized:hover .solution-card-icon-wrapper {
-  background: rgba(50, 205, 50, 0.2) !important;
-  border-color: rgba(50, 205, 50, 0.5) !important;
-  box-shadow: 0 0 15px rgba(50, 205, 50, 0.3) !important;
-}
-.solution-card.card-specialized:hover .solution-card-link {
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(50, 205, 50, 0.5);
-}
+/* Uniform Solutions Layout Signatures */
 
 /* Scoped Hero Canvas */
 #network-canvas {
