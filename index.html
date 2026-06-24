@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Tech — Systems Integrator & AV, ELV, ICT Solutions</title>
+  <meta name="description" content="ABC Tech is a UAE-based premium system integrator delivering advanced AV Solutions, ELV Systems, ICT Solutions, and Annual Maintenance Contracts (AMC).">
+  <link rel="stylesheet" href="css/style.css?v=4.9">
+</head>
+<body>
+
+
+
+  <!-- Background Atmosphere -->
+  <div class="background-canvas"></div>
+  <div class="aurora-glow aurora-1"></div>
+  <div class="aurora-glow aurora-2"></div>
+  <div class="hexagon-grid"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">
+          <div class="logo-shape-1"></div>
+          <div class="logo-shape-2"></div>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">ABC</span>
+          <span class="logo-subtitle">TECHNOLOGIES</span>
+        </div>
+      </a>
+      
+      <nav class="nav-menu-wrapper">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="amc.html" class="nav-link">AMC Services</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <a href="contact.html" class="btn btn-primary nav-cta-btn"><span>Get Started</span></a>
+    </div>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero-pinned-container">
+    <canvas id="network-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; filter: blur(0.5px); pointer-events: none;"></canvas>
+
+    <!-- Integrated layout: Headline and CTA centered natively over the cinematic environment -->
+    <div class="container hero-pinned-layout">
+      <!-- Centered Text Content -->
+      <div class="hero-content">
+        
+        <span class="hero-eyebrow fade-up-animate" style="animation-delay: 0.1s;">SYSTEMS INTEGRATION SPECIALISTS</span>
+        
+        <h1 class="hero-title fade-up-animate" style="animation-delay: 0.25s;">
+          Powering <span class="gradient-text">Intelligent Environments</span>
+        </h1>
+        
+        <p class="hero-tagline fade-up-animate" style="animation-delay: 0.4s;">
+          Leading systems integrator specializing in AV Solutions, ELV Systems, ICT Infrastructure, Security Systems, and Smart Automation for modern commercial and residential developments.
+        </p>
+        
+        <div class="hero-actions fade-up-animate" style="animation-delay: 0.55s;">
+          <a href="services.html" class="btn hero-btn-primary">
+            <span>Explore Solutions</span> 
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+          <a href="contact.html" class="btn hero-btn-secondary">
+            <i data-lucide="phone-call" style="width: 16px; height: 16px;"></i>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator at the bottom -->
+    <div class="scroll-indicator fade-up-animate" style="animation-delay: 0.7s;">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ============ OUR SOLUTIONS ============ -->
+  <section class="section" style="border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="solutions-header" style="display: grid; grid-template-columns: 1fr 1fr; align-items: flex-end; gap: 40px; margin-bottom: 60px;">
+        <div>
+          <span class="section-badge" style="margin-bottom: 12px; display: inline-block;">Our Solutions</span>
+          <h2 class="section-title" style="margin-top: 0;">End-to-End Technology Solutions</h2>
+        </div>
+        <div>
+          <p style="font-size: 1.05rem; line-height: 1.6; color: var(--text-muted);">From immersive audio-visual experiences to robust security systems and future-ready networks, we provide everything you need under one roof.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- AV Solutions Card -->
+        <div class="solution-card reveal-card card-av">
+          <div class="solution-card-img-wrapper">
+            <div class="solution-card-img-overlay"></div>
+            <img src="images/service-av.jpg" alt="AV Solutions" onerror="this.remove();">
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 4;">
+            <div class="solution-card-icon-wrapper">
+              <i data-lucide="monitor" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="solution-card-title">AV Solutions</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1;">Innovative audio-visual designs, digital signage, background music (BGM), and public address systems that inspire and engage.</p>
+            <a href="services.html?tab=av" class="solution-card-link">
+              <span>Explore AV Solutions</span> 
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ELV Systems Card -->
+        <div class="solution-card reveal-card card-elv">
+          <div class="solution-card-img-wrapper">
+            <div class="solution-card-img-overlay"></div>
+            <img src="images/service-elv.jpg" alt="ELV Systems" onerror="this.remove();">
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 4;">
+            <div class="solution-card-icon-wrapper">
+              <i data-lucide="shield-check" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="solution-card-title">ELV Systems</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1;">Extra Low Voltage integrations including gate barriers, video/audio intercoms, queue management, and payment kiosk systems.</p>
+            <a href="services.html?tab=elv" class="solution-card-link">
+              <span>Explore ELV Systems</span> 
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ICT Infrastructure Card -->
+        <div class="solution-card reveal-card card-ict">
+          <div class="solution-card-img-wrapper">
+            <div class="solution-card-img-overlay"></div>
+            <img src="images/service-ict.jpg" alt="ICT Infrastructure" onerror="this.remove();">
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 4;">
+            <div class="solution-card-icon-wrapper">
+              <i data-lucide="network" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="solution-card-title">ICT Infrastructure</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1;">Enterprise-grade structured cabling, high-density Wi-Fi networks, and secure switching solutions for seamless business connectivity.</p>
+            <a href="services.html?tab=ict" class="solution-card-link">
+              <span>Explore ICT Infrastructure</span> 
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Smart Automation Card -->
+        <div class="solution-card reveal-card card-automation">
+          <div class="solution-card-img-wrapper">
+            <div class="solution-card-img-overlay"></div>
+            <img src="images/service-automation.jpg" alt="Smart Automation" onerror="this.remove();">
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 4;">
+            <div class="solution-card-icon-wrapper">
+              <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="solution-card-title">Smart Automation</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1;">Advanced home automation and intelligent building management systems (BMS) for centralized lighting, climate, and security control.</p>
+            <a href="services.html?tab=automation" class="solution-card-link">
+              <span>Explore Smart Automation</span> 
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Security Systems Card -->
+        <div class="solution-card reveal-card card-security">
+          <div class="solution-card-img-wrapper">
+            <div class="solution-card-img-overlay"></div>
+            <img src="images/service-security.jpg" alt="Security Systems" onerror="this.remove();">
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 4;">
+            <div class="solution-card-icon-wrapper">
+              <i data-lucide="shield" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="solution-card-title">Security Systems</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1;">Enterprise IP CCTV surveillance, biometric access control, ANPR systems, and intelligent threat monitoring.</p>
+            <a href="services.html?tab=security" class="solution-card-link">
+              <span>Explore Security Systems</span> 
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Specialized Solutions Card -->
+        <div class="solution-card reveal-card card-specialized">
+          <div class="solution-card-img-wrapper">
+            <div class="solution-card-img-overlay"></div>
+            <img src="images/service-specialized.jpg" alt="Specialized Solutions" onerror="this.remove();">
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 4;">
+            <div class="solution-card-icon-wrapper">
+              <i data-lucide="tv" style="width: 22px; height: 22px;"></i>
+            </div>
+            <h3 class="solution-card-title">Specialized Solutions</h3>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 24px; flex-grow: 1;">Bespoke technology integrations for home cinemas, smart interactive classrooms, and multi-screen hybrid training rooms.</p>
+            <a href="services.html?tab=specialized" class="solution-card-link">
+              <span>Explore Specialized Solutions</span> 
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRIES WE SERVE ============ -->
+  <section class="section" style="background: var(--bg-mid); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <span class="section-badge">Industries We Serve</span>
+        <h2 class="section-title">Empowering Every Industry</h2>
+      </div>
+
+      <div class="industries-grid">
+        <!-- 1. Commercial Buildings -->
+        <div class="industry-card card-commercial">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="building" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Commercial Buildings</h3>
+          <p class="industry-card-text">Public address systems, digital signage kiosks, background music (BGM), and central IP CCTV surveillance control rooms.</p>
+        </div>
+
+        <!-- 2. Corporate Offices -->
+        <div class="industry-card card-corporate">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="building-2" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Corporate Offices</h3>
+          <p class="industry-card-text">Smart boardrooms, wireless video conferencing, structured cabling networks, switching infrastructure, and access control.</p>
+        </div>
+
+        <!-- 3. Hospitality Projects -->
+        <div class="industry-card card-hospitality">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="hotel" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Hospitality Projects</h3>
+          <p class="industry-card-text">Integrated guest room automation (GRMS), digital signage, multi-room audio, interactive IPTV, and smart lighting systems.</p>
+        </div>
+
+        <!-- 4. Educational Institutions -->
+        <div class="industry-card card-education">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="graduation-cap" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Educational Institutions</h3>
+          <p class="industry-card-text">Smart classrooms, interactive displays, hybrid learning auditoriums, public address systems, and campus switching/Wi-Fi.</p>
+        </div>
+
+        <!-- 5. Healthcare Facilities -->
+        <div class="industry-card card-healthcare">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="heart-pulse" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Healthcare Facilities</h3>
+          <p class="industry-card-text">IP nurse call systems, patient entertainment hubs, secure database switching, and integrated CCTV security monitoring.</p>
+        </div>
+
+        <!-- 6. Retail Environments -->
+        <div class="industry-card card-retail">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Retail Environments</h3>
+          <p class="industry-card-text">High-resolution video walls, window projection displays, foot-traffic analytics cameras, and EAS anti-theft gates.</p>
+        </div>
+
+        <!-- 7. Residential Developments -->
+        <div class="industry-card card-residential">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="home" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Residential Developments</h3>
+          <p class="industry-card-text">Bespoke home cinema design, lighting/climate automation, smart video intercoms, and remote gate barrier control.</p>
+        </div>
+
+        <!-- 8. Government & Landmarks -->
+        <div class="industry-card card-government">
+          <div class="industry-card-icon-wrapper">
+            <i data-lucide="landmark" style="width: 20px; height: 20px;"></i>
+          </div>
+          <h3 class="industry-card-title">Government & Landmarks</h3>
+          <p class="industry-card-text">High-security access controls, central operations command rooms, redundant network cabling, and robust CCTV grids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US & AMC SPOTLIGHT ============ -->
+  <section class="section" style="border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      
+      <!-- Top header and features list -->
+      <div style="margin-bottom: 60px;">
+        <span class="section-badge" style="margin-bottom: 12px; display: inline-block;">Why Choose Us</span>
+        <h2 class="section-title" style="margin-top: 0; margin-bottom: 40px;">The Right Technology Partner for You</h2>
+      </div>
+
+      <div class="why-choose-bento scroll-reveal">
+        <!-- Card 1: Large Visual Showcase (spans 2 columns) -->
+        <div class="bento-card bento-card-visual">
+          <div class="bento-image-wrapper">
+            <img src="images/why-choose-us.png" alt="Futuristic Integrated Control System Server Rack">
+            <div class="bento-image-overlay"></div>
+          </div>
+          <div class="bento-card-content visual-overlay-content">
+            <span class="bento-card-badge">Systems Integration Hub</span>
+            <h3 class="bento-card-title">Unified Infrastructure</h3>
+          </div>
+        </div>
+
+        <!-- Card 2: End-to-End Solutions -->
+        <div class="bento-card">
+          <div class="bento-card-icon">
+            <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+          </div>
+          <div class="bento-card-body">
+            <h4 class="bento-card-title">End-to-End Integration</h4>
+            <p class="bento-card-text">Complete lifecycle coverage from technical design and engineering drawings to installation and final commissioning.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Certified Experts -->
+        <div class="bento-card">
+          <div class="bento-card-icon">
+            <i data-lucide="users" style="width: 22px; height: 22px;"></i>
+          </div>
+          <div class="bento-card-body">
+            <h4 class="bento-card-title">Certified Engineers</h4>
+            <p class="bento-card-text">Our engineering team holds premium OEM and industry-wide certifications across AV, security, and building automation.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Quality First -->
+        <div class="bento-card">
+          <div class="bento-card-icon">
+            <i data-lucide="shield" style="width: 22px; height: 22px;"></i>
+          </div>
+          <div class="bento-card-body">
+            <h4 class="bento-card-title">Enterprise Standards</h4>
+            <p class="bento-card-text">We source and integrate certified enterprise-grade hardware, ensuring long-term resilience and compliance.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Reliable SLAs -->
+        <div class="bento-card">
+          <div class="bento-card-icon">
+            <i data-lucide="activity" style="width: 22px; height: 22px;"></i>
+          </div>
+          <div class="bento-card-body">
+            <h4 class="bento-card-title">Responsive SLAs</h4>
+            <p class="bento-card-text">Protecting operations with dedicated AMC response times, routine diagnostic inspections, and 24/7 technical support.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom split: AMC Spotlight -->
+      <div class="amc-spotlight-panel">
+        <!-- Left: Image box -->
+        <div class="amc-spotlight-img-box">
+          <div class="amc-spotlight-img-placeholder">
+            <span class="img-placeholder-label">[AI Image: Organized server rack open showing structured cables and a professional tech servicing it]</span>
+            <img src="images/amc-spotlight.jpg" alt="Annual Maintenance Contract servicing" class="amc-spotlight-img" onerror="this.remove();">
+          </div>
+        </div>
+        <!-- Right: Text & Checklist -->
+        <div class="amc-spotlight-content">
+          <span class="section-badge">AMC Services</span>
+          <h3 class="amc-spotlight-title">Keep Your Systems Running at Their Best</h3>
+          <p class="amc-spotlight-text">Our Annual Maintenance Contracts ensure your systems remain secure, efficient, and always operational, preventing costly system failures before they occur.</p>
+          
+          <ul class="amc-check-grid">
+            <li class="amc-check-item">
+              <i data-lucide="check" class="amc-check-icon"></i>
+              <span>Preventive &amp; Corrective Maintenance</span>
+            </li>
+            <li class="amc-check-item">
+              <i data-lucide="check" class="amc-check-icon"></i>
+              <span>Regular System Health Checks &amp; Diagnosis</span>
+            </li>
+            <li class="amc-check-item">
+              <i data-lucide="check" class="amc-check-icon"></i>
+              <span>24/7 Support &amp; On-Site Priority Assistance</span>
+            </li>
+            <li class="amc-check-item">
+              <i data-lucide="check" class="amc-check-icon"></i>
+              <span>Priority Response SLA Response Commits</span>
+            </li>
+            <li class="amc-check-item">
+              <i data-lucide="check" class="amc-check-icon"></i>
+              <span>Cost-effective &amp; Hassle-free Lifecycle Support</span>
+            </li>
+          </ul>
+          
+          <a href="amc.html" class="btn btn-primary"><span>Explore AMC Services</span> <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section final-cta" style="border-top: 1px solid var(--border-subtle); padding: 80px 0; background: rgba(15, 98, 254, 0.02);">
+    <div class="container final-cta-content" style="display: flex; justify-content: space-between; align-items: center; gap: 40px; text-align: left;">
+      <div>
+        <h2 class="final-cta-title" style="margin-top: 0; margin-bottom: 12px; font-size: 2rem;">Ready to Build Smarter Spaces?</h2>
+        <p style="color: var(--text-muted); font-size: 1rem; margin: 0;">Let's discuss how we can help you with the right technology solutions.</p>
+      </div>
+      <div style="display: flex; gap: 16px;">
+        <a href="contact.html" class="btn btn-primary"><span>Get a Free Consultation</span> <i data-lucide="arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link footer-brand-logo">
+            <div class="logo-icon">
+              <div class="logo-shape-1"></div>
+              <div class="logo-shape-2"></div>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">ABC</span>
+              <span class="logo-subtitle">TECHNOLOGIES</span>
+            </div>
+          </a>
+          <p class="footer-brand-tagline">System Integrators & Service Providers in UAE. Premium AV, ELV, and ICT solutions for every environment.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html">Home</a></li>
+            <li class="footer-link"><a href="about.html">About Us</a></li>
+            <li class="footer-link"><a href="services.html">Services</a></li>
+            <li class="footer-link"><a href="amc.html">AMC Services</a></li>
+            <li class="footer-link"><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="services.html?tab=av">AV Solutions</a></li>
+            <li class="footer-link"><a href="services.html?tab=elv">ELV Systems</a></li>
+            <li class="footer-link"><a href="services.html?tab=ict">ICT Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="mailto:info@abctech.ae">info@abctech.ae</a></li>
+            <li class="footer-link"><a href="tel:+97140000000">+971 4 000 0000</a></li>
+            <li class="footer-link"><a href="contact.html">Dubai, UAE</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> ABC Tech. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js?v=4.9"></script>
+  <script src="js/animations.js?v=4.9"></script>
+  <script>lucide.createIcons();</script>
+  <script>
+    // Failsafe: if after 1.5 seconds the hero is still invisible (e.g. CDN script block), force show it
+    setTimeout(function() {
+      var words = document.querySelectorAll('.kinetic-word');
+      if (words.length > 0 && (window.getComputedStyle(words[0]).opacity === '0' || words[0].style.opacity === '0')) {
+        console.warn('Failsafe triggered: showing hero content manually.');
+        words.forEach(function(w) { 
+          w.style.opacity = '1'; 
+          w.style.transform = 'none'; 
+          w.style.filter = 'none'; 
+        });
+        var tagline = document.querySelector('.hero-tagline');
+        var actions = document.querySelector('.hero-actions');
+        var trust = document.querySelector('.hero-trust-badge');
+        var graphic = document.querySelector('.hero-interactive-graphic');
+        if (tagline) { tagline.style.opacity = '1'; tagline.style.transform = 'none'; }
+        if (actions) { actions.style.opacity = '1'; actions.style.transform = 'none'; }
+        if (trust) { trust.style.opacity = '1'; trust.style.transform = 'none'; }
+        if (graphic) {
+          graphic.style.opacity = '1';
+          graphic.style.transform = 'none';
+          graphic.querySelectorAll('.hotspot-dot, .hotspot-label').forEach(function(el) {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          });
+          graphic.querySelectorAll('.hero-net-path').forEach(function(el) {
+            el.style.strokeDashoffset = '0';
+          });
+        }
+      }
+    }, 1500);
+  </script>
+</body>
+</html>

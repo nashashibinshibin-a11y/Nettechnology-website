@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services — ABC Tech</title>
+  <meta name="description" content="Explore our extensive catalog of AV Solutions, security ELV Systems, and enterprise-grade ICT networking architectures.">
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dynamic Background effects -->
+  <div class="background-canvas"></div>
+  <div class="aurora-glow aurora-1"></div>
+  <div class="aurora-glow aurora-2"></div>
+  <div class="hexagon-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-icon">
+          <div class="logo-shape-1"></div>
+          <div class="logo-shape-2"></div>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">ABC</span>
+          <span class="logo-subtitle">TECHNOLOGIES</span>
+        </div>
+      </a>
+      
+      <nav class="nav-menu-wrapper">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="amc.html" class="nav-link">AMC Services</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <a href="contact.html" class="btn btn-primary nav-cta-btn"><span>Get Started</span></a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="about-hero" style="padding-bottom: 20px;">
+    <div class="container">
+      <span class="section-badge">Service Portfolio</span>
+      <h1 class="gradient-text" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 20px;">Infrastructure Integrations</h1>
+      <p style="max-width: 600px; margin: 0 auto 45px;">Select a category below to explore our enterprise solutions in AV engineering, physical security ELV, and fiber/network ICT.</p>
+
+      <!-- Services Circuit Diagram Hub -->
+      <div class="services-hub-diagram fade-up-trigger">
+        <svg viewBox="0 0 600 150" width="100%" height="150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Hub line paths that draw on scroll -->
+          <path class="hub-line hub-line-av" d="M 300,85 L 120,85" stroke="var(--accent-teal)" stroke-width="2.5" stroke-dasharray="180" stroke-dashoffset="180"/>
+          <path class="hub-line hub-line-elv" d="M 300,85 L 300,25" stroke="var(--accent-blue)" stroke-width="2.5" stroke-dasharray="60" stroke-dashoffset="60"/>
+          <path class="hub-line hub-line-ict" d="M 300,85 L 480,85" stroke="var(--accent-teal)" stroke-width="2.5" stroke-dasharray="180" stroke-dashoffset="180"/>
+
+          <!-- Nodes that fade in once lines complete -->
+          <circle cx="120" cy="85" r="9" class="hub-node hub-node-av" fill="#0F62FE" opacity="0" filter="drop-shadow(0 0 8px #0F62FE)"/>
+          <circle cx="300" cy="25" r="9" class="hub-node hub-node-elv" fill="#78A9FF" opacity="0" filter="drop-shadow(0 0 8px #78A9FF)"/>
+          <circle cx="480" cy="85" r="9" class="hub-node hub-node-ict" fill="#0F62FE" opacity="0" filter="drop-shadow(0 0 8px #0F62FE)"/>
+
+          <!-- Center Master Hub Node -->
+          <circle cx="300" cy="85" r="15" class="hub-center" fill="url(#servicesHubGradient)" filter="drop-shadow(0 0 12px rgba(15, 98, 254, 0.8))"/>
+          <circle cx="300" cy="85" r="8" fill="var(--bg-dark)"/>
+
+          <!-- Node Labels -->
+          <text x="120" y="115" text-anchor="middle" class="hub-node-text text-av">AV SOLUTIONS</text>
+          <text x="300" y="13" text-anchor="middle" class="hub-node-text text-elv">ELV SYSTEMS</text>
+          <text x="480" y="115" text-anchor="middle" class="hub-node-text text-ict">ICT SOLUTIONS</text>
+
+          <defs>
+            <linearGradient id="servicesHubGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0F62FE"/>
+              <stop offset="100%" stop-color="#78A9FF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Filter Toggle -->
+  <div class="services-toggle-container">
+    <div class="services-tabs">
+      <button class="tab-btn active" data-tab="av">AV Solutions</button>
+      <button class="tab-btn" data-tab="elv">ELV Systems</button>
+      <button class="tab-btn" data-tab="ict">ICT Infrastructure</button>
+      <button class="tab-btn" data-tab="automation">Smart Automation</button>
+      <button class="tab-btn" data-tab="security">Security Systems</button>
+      <button class="tab-btn" data-tab="specialized">Specialized Solutions</button>
+    </div>
+  </div>
+
+  <!-- Services Categories -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      
+      <!-- ==================== AV SOLUTIONS ==================== -->
+      <div id="services-av" class="services-category-section active">
+        <div class="av-solutions-grid">
+          
+          <!-- 1. Video Wall -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">01 / AV Solutions</span>
+              <h3 class="av-title">Video Wall &amp; Digital Signage</h3>
+              <p>Ultra-narrow bezel LCD matrices and high-resolution indoor LED videowalls managed by centralized content servers, ideal for control rooms, public lobbies, and retail environments.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: High-Definition LED Control Room Video Wall Display]</span>
+                    <img src="images/service-av-videowall.jpg" alt="Video Wall Solutions" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Projectors -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">02 / AV Solutions</span>
+              <h3 class="av-title">Projectors &amp; Screens</h3>
+              <p>High-lumens laser projectors, motorized ambient light rejecting (ALR) screens, and integrated projection-mapping setups for large lecture halls, meeting spaces, and auditoriums.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Auditorium Laser Projection Setup with Ambient Light Rejecting Screen]</span>
+                    <img src="images/service-av-projectors.jpg" alt="Projectors and Screens" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Indoor & Outdoor LED -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">03 / AV Solutions</span>
+              <h3 class="av-title">Indoor &amp; Outdoor LED</h3>
+              <p>Weatherproof high-brightness outdoor LED banners and high-density fine pitch indoor displays for immersive branding, billboards, and architectural media installations.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Immersive Curved Indoor LED Panel Array]</span>
+                    <img src="images/service-av-led.jpg" alt="LED Displays" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Background Music -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">04 / AV Solutions</span>
+              <h3 class="av-title">Background Music (BGM) Systems</h3>
+              <p>Zoned multi-channel amplifiers, acoustic ceiling speakers, and smart scheduling systems that provide uniform audio distribution for hotels, retail corridors, and restaurants.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: High-Fidelity Acoustic Ceiling Speaker Node]</span>
+                    <img src="images/service-av-bgm.jpg" alt="BGM Systems" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Public Address System -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">05 / AV Solutions</span>
+              <h3 class="av-title">Public Address &amp; Voice Alarm</h3>
+              <p>EN54-certified paging systems, emergency announcement matrices, and multi-zone distribution panels integrated with central fire-alarm controls for safety compliance.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: EN54-Certified Voice Alarm System Control Racks]</span>
+                    <img src="images/service-av-pa.jpg" alt="Public Address" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== ELV SYSTEMS ==================== -->
+      <div id="services-elv" class="services-category-section">
+        <div class="elv-systems-grid">
+          
+          <!-- 1. Gate Barrier -->
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">01</span>
+            <div class="elv-icon"><i data-lucide="log-in" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">Gate Barriers &amp; Bollards</h3>
+              <p class="elv-card-desc">Motorized entrance boom gates, dynamic rising bollards, and loop coils detecting vehicle access paths.</p>
+              <a href="contact.html?service=gate_barrier" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <!-- 2. Video/Audio Intercom -->
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">02</span>
+            <div class="elv-icon"><i data-lucide="phone-call" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">Video &amp; Audio Intercom</h3>
+              <p class="elv-card-desc">IP-based entry consoles, apartment display systems, and guard station monitoring hubs.</p>
+              <a href="contact.html?service=intercom" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <!-- 3. Queue Management -->
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">03</span>
+            <div class="elv-icon"><i data-lucide="users" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">Queue Management Systems</h3>
+              <p class="elv-card-desc">Digital ticketing kiosks, client queue status monitors, and teller consoles optimizing medical and retail lobbies.</p>
+              <a href="contact.html?service=queue_management" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <!-- 4. Payment Kiosks -->
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">04</span>
+            <div class="elv-icon"><i data-lucide="credit-card" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">Payment Kiosk Systems</h3>
+              <p class="elv-card-desc">Secure self-checkout units, digital registration terminals, and point-of-sale hardware terminals.</p>
+              <a href="contact.html?service=payment_kiosk" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <!-- 5. IPTV & Smart TV -->
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">05</span>
+            <div class="elv-icon"><i data-lucide="tv" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">IPTV &amp; Smart TV Solutions</h3>
+              <p class="elv-card-desc">Interactive television platforms for hotel rooms, hospitality portals, and remote command screen management.</p>
+              <a href="contact.html?service=iptv" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== ICT SOLUTIONS ==================== -->
+      <div id="services-ict" class="services-category-section">
+        <div class="ict-solutions-layout">
+          
+          <!-- Animated Fiber Line (GSAP target) -->
+          <div class="ict-network-svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 1000 800" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="ict-network-line" d="M 500,50 L 500,200 L 200,320 L 200,450 L 800,550 L 800,700 L 500,780" stroke="url(#ictLineGradient)" stroke-width="2.5" stroke-linecap="round" filter="drop-shadow(0 0 8px #0F62FE)"/>
+              <defs>
+                <linearGradient id="ictLineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#0F62FE"/>
+                  <stop offset="50%" stop-color="#78A9FF"/>
+                  <stop offset="100%" stop-color="#0F62FE"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 3 Service Rows -->
+          <div class="ict-cards-container">
+            
+            <!-- 1. Structured Cabling -->
+            <div class="ict-solution-row">
+              <div class="glass-card ict-content-panel">
+                <div class="ict-icon"><i data-lucide="git-merge" style="width: 36px; height: 36px;"></i></div>
+                <h3>Structured Cabling Solutions</h3>
+                <p style="margin-bottom: 20px;">Category 6A and Category 7 copper termination, indoor/outdoor fiber backbone layouts, server rack patching designs, and certified cable reports ensuring long-term hardware support.</p>
+                <a href="contact.html?service=structured_cabling" class="btn btn-outline">Consult Cabling</a>
+              </div>
+              <div class="ict-visual-panel">
+                <div class="glass-card ict-visual-node">
+                  <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="50" r="6" fill="#0F62FE"/>
+                    <circle cx="80" cy="20" r="6" fill="#78A9FF"/>
+                    <circle cx="80" cy="80" r="6" fill="#78A9FF"/>
+                    <path d="M 20,50 Q 50,20 80,20 M 20,50 Q 50,80 80,80" stroke="var(--accent-teal)" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. WiFi Solutions -->
+            <div class="ict-solution-row">
+              <div class="glass-card ict-content-panel">
+                <div class="ict-icon"><i data-lucide="wifi" style="width: 36px; height: 36px;"></i></div>
+                <h3>High-Density WiFi Solutions</h3>
+                <p style="margin-bottom: 20px;">Corporate wireless networks using standard WiFi 6 and WiFi 6E indoor access points, guest portals with authentication panels, and RF survey mapping optimizing coverages.</p>
+                <a href="contact.html?service=wifi_solutions" class="btn btn-outline">Consult WiFi</a>
+              </div>
+              <div class="ict-visual-panel">
+                <div class="glass-card ict-visual-node">
+                  <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="8" fill="#0F62FE"/>
+                    <circle cx="50" cy="50" r="25" fill="none" stroke="var(--accent-blue)" stroke-width="1.5" stroke-dasharray="3"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent-teal)" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Networking & Switches -->
+            <div class="ict-solution-row">
+              <div class="glass-card ict-content-panel">
+                <div class="ict-icon"><i data-lucide="server" style="width: 36px; height: 36px;"></i></div>
+                <h3>Enterprise Networking &amp; Switches</h3>
+                <p style="margin-bottom: 20px;">High-capacity Managed layer 2/3 switches, secure business network gateways, virtual network (VLAN) allocations, and hardware firewalls protecting databases.</p>
+                <a href="contact.html?service=networking" class="btn btn-outline">Consult Switchboards</a>
+              </div>
+              <div class="ict-visual-panel">
+                <div class="glass-card ict-visual-node">
+                  <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="15" width="70" height="20" fill="none" stroke="var(--accent-teal)" stroke-width="1.5" rx="2"/>
+                    <rect x="15" y="40" width="70" height="20" fill="none" stroke="var(--accent-teal)" stroke-width="1.5" rx="2"/>
+                    <rect x="15" y="65" width="70" height="20" fill="none" stroke="var(--accent-teal)" stroke-width="1.5" rx="2"/>
+                    <circle cx="30" cy="25" r="3" fill="#78A9FF"/>
+                    <circle cx="30" cy="50" r="3" fill="#78A9FF"/>
+                    <circle cx="30" cy="75" r="3" fill="#78A9FF"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SMART AUTOMATION ==================== -->
+      <div id="services-automation" class="services-category-section">
+        <div class="av-solutions-grid">
+          
+          <!-- 1. Building Automation (BMS) -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">01 / Smart Automation</span>
+              <h3 class="av-title">Building Management Systems (BMS)</h3>
+              <p>Centralized platforms integrating HVAC controls, lighting loops, energy metrics, and emergency shutdown relays, designed to optimize building operations and sustainability.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Centralized Building Automation Dashboard and Analytics Control Interface]</span>
+                    <img src="images/service-automation-bms.jpg" alt="Building Management Systems" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Smart Home Automation -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">02 / Smart Automation</span>
+              <h3 class="av-title">Smart Home Systems</h3>
+              <p>Premium smart residential integration linking multi-room music systems, remote door barriers, window shades, and climate controls into a unified tablet and mobile app.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Modern Smart Home Controller showing environmental controls]</span>
+                    <img src="images/service-automation-home.jpg" alt="Smart Home Automation" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Lighting & Climate Control -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">03 / Smart Automation</span>
+              <h3 class="av-title">Lighting &amp; Climate Integration</h3>
+              <p>Automated dimming panels, customized lighting profiles, and motorized thermostat controls operating seamlessly to reduce energy usage while providing customized comfort.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Premium Smart Thermostat and Wall Keypad Array]</span>
+                    <img src="images/service-automation-lighting.jpg" alt="Lighting & Climate Control" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== SECURITY SYSTEMS ==================== -->
+      <div id="services-security" class="services-category-section">
+        <div class="elv-systems-grid">
+          
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">01</span>
+            <div class="elv-icon"><i data-lucide="video" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">IP CCTV Surveillance</h3>
+              <p class="elv-card-desc">High-definition network IP cameras, Network Video Recorders (NVR), and smart AI analytics matrices for threat alerts.</p>
+              <a href="contact.html?service=cctv" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">02</span>
+            <div class="elv-icon"><i data-lucide="key-round" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">Biometric Access Control</h3>
+              <p class="elv-card-desc">RFID lock integrations, biometric terminals, and cloud badge servers for enterprise personnel verification.</p>
+              <a href="contact.html?service=access_control" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">03</span>
+            <div class="elv-icon"><i data-lucide="clock" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">Time Attendance</h3>
+              <p class="elv-card-desc">Advanced facial-scan clock-in terminals integrated with central payroll and human resource managers.</p>
+              <a href="contact.html?service=time_attendance" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+          <div class="glass-card elv-card reveal-card">
+            <span class="elv-number">04</span>
+            <div class="elv-icon"><i data-lucide="scan-line" style="width: 32px; height: 32px;"></i></div>
+            <div>
+              <h3 class="elv-card-title">ANPR Systems</h3>
+              <p class="elv-card-desc">Automatic Number Plate Recognition camera channels linked with barrier relays for security parking entries.</p>
+              <a href="contact.html?service=anpr" class="elv-learn-more">Inquire Now <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== SPECIALIZED SOLUTIONS ==================== -->
+      <div id="services-specialized" class="services-category-section">
+        <div class="av-solutions-grid">
+          
+          <!-- 1. Home Cinema Systems -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">01 / Specialized Solutions</span>
+              <h3 class="av-title">Home Cinema Systems</h3>
+              <p>Bespoke private theater designs combining architectural acoustic panels, Dolby Atmos surround sound, and high-lumens 4K laser projection systems for the ultimate media room experience.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Luxury Home Cinema Room with Dolby Atmos Sound &amp; Laser Projection]</span>
+                    <img src="images/service-specialized-cinema.jpg" alt="Home Cinema Systems" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Smart Classrooms -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">02 / Specialized Solutions</span>
+              <h3 class="av-title">Smart Classrooms</h3>
+              <p>Interactive display panels, interactive document cameras, localized sound reinforcement, and streamlined controls designed to enhance student engagement and collaborative learning.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Collaborative Smart Classroom Setup with Interactive Touchscreens]</span>
+                    <img src="images/service-specialized-classroom.jpg" alt="Smart Classrooms" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Video Conferencing & Hybrid Spaces -->
+          <div class="av-solution-item">
+            <div class="av-content">
+              <span class="av-indicator">03 / Specialized Solutions</span>
+              <h3 class="av-title">Video Conferencing &amp; Hybrid Spaces</h3>
+              <p>Zoom Rooms and Microsoft Teams Rooms certified hardware, intelligent directional ceiling mic arrays, presenter-tracking cameras, and multi-display hubs for reliable corporate huddles.</p>
+            </div>
+            <div class="av-mockup-wrapper">
+              <div class="av-mockup-card">
+                <div class="mockup-header">
+                  <span class="mockup-dot mockup-dot-red"></span>
+                  <span class="mockup-dot mockup-dot-yellow"></span>
+                  <span class="mockup-dot mockup-dot-green"></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-img-placeholder">
+                    <span>[AI Graphic: Modern Enterprise Videoconferencing Huddle Space Setup]</span>
+                    <img src="images/service-specialized-video.jpg" alt="Video Conferencing Solutions" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;" onerror="this.remove();">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section final-cta" style="border-top: 1px solid var(--border-subtle); padding: 80px 0; background: rgba(15, 98, 254, 0.02);">
+    <div class="container final-cta-content" style="display: flex; justify-content: space-between; align-items: center; gap: 40px; text-align: left;">
+      <div>
+        <h2 class="final-cta-title" style="margin-top: 0; margin-bottom: 12px; font-size: 2rem;">Ready to Build Smarter Spaces?</h2>
+        <p style="color: var(--text-muted); font-size: 1rem; margin: 0;">Let's discuss how we can help you with the right technology solutions.</p>
+      </div>
+      <div style="display: flex; gap: 16px;">
+        <a href="contact.html" class="btn btn-primary"><span>Get a Free Consultation</span> <i data-lucide="arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link footer-brand-logo">
+            <div class="logo-icon">
+              <div class="logo-shape-1"></div>
+              <div class="logo-shape-2"></div>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">ABC</span>
+              <span class="logo-subtitle">TECHNOLOGIES</span>
+            </div>
+          </a>
+          <p>Professional systems integration services across Dubai and the UAE. AV Solutions, security ELV Systems, and business-grade ICT architectures.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Sitemap</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="index.html">Home</a></li>
+            <li class="footer-link"><a href="about.html">About Us</a></li>
+            <li class="footer-link"><a href="services.html">Services</a></li>
+            <li class="footer-link"><a href="amc.html">AMC Services</a></li>
+            <li class="footer-link"><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="services.html?tab=av">AV Solutions</a></li>
+            <li class="footer-link"><a href="services.html?tab=elv">ELV Systems</a></li>
+            <li class="footer-link"><a href="services.html?tab=ict">ICT Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>AMC Services</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="amc.html">Preventive Maintenance</a></li>
+            <li class="footer-link"><a href="amc.html">Corrective Upkeep</a></li>
+            <li class="footer-link"><a href="amc.html">24/7 SLA Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> ABC Tech. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/services.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
