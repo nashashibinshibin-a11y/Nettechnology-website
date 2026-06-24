@@ -2,8 +2,8 @@
    ABC Tech — Premium Visual Design System
    ========================================================= */
 
-/* Montserrat & Inter via Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+/* Space Grotesk & Inter via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 /* =========================================================
    1. CSS CUSTOM PROPERTIES
@@ -42,8 +42,8 @@
   --shadow-hover:   0 20px 50px rgba(15, 98, 254, 0.1);
 
   /* Fonts */
-  --font-heading: 'Montserrat', 'Inter', sans-serif;
-  --font-body:    'Inter', 'Montserrat', sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body:    'Inter', sans-serif;
 
   /* Transitions */
   --transition-fast:   all 0.2s ease;
@@ -2940,25 +2940,25 @@ a {
   object-fit: cover;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
   z-index: 2;
-  filter: brightness(0.32); /* Darken image directly for contrast */
+  filter: brightness(0.43); /* Slightly brighter image */
 }
 
 .solution-card:hover .solution-card-img-wrapper img {
   transform: scale(1.1);
-  filter: brightness(0.38); /* Keep it dark on hover to protect text readability */
+  filter: brightness(0.48); /* Softened brightness on hover */
 }
 
 /* Super dark gradient overlay for text readability */
 .solution-card-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.88) 60%, #08090c 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.72) 55%, #08090c 100%) !important;
   z-index: 2;
   transition: all 0.5s ease;
 }
 
 .solution-card:hover .solution-card-img-overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.95) 50%, #08090c 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.82) 45%, #08090c 100%) !important;
 }
 
 .solution-card-body {
@@ -3010,7 +3010,7 @@ a {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  transition: max-height 1.2s cubic-bezier(0.25, 1, 0.3, 1), opacity 0.9s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
 .solution-card:hover .solution-card-details {
@@ -3022,7 +3022,7 @@ a {
 .solution-card-details > * {
   transform: translateY(15px);
   opacity: 0;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+  transition: transform 1.0s cubic-bezier(0.25, 1, 0.3, 1), opacity 1.0s ease;
 }
 
 .solution-card:hover .solution-card-details > * {
@@ -3031,15 +3031,15 @@ a {
 }
 
 .solution-card:hover .solution-card-details .solution-card-desc {
-  transition-delay: 0.05s;
+  transition-delay: 0.08s;
 }
 
 .solution-card:hover .solution-card-details .solution-card-features {
-  transition-delay: 0.1s;
+  transition-delay: 0.18s;
 }
 
 .solution-card:hover .solution-card-details .solution-card-link {
-  transition-delay: 0.15s;
+  transition-delay: 0.28s;
 }
 
 .solution-card-desc {
