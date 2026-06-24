@@ -2575,6 +2575,13 @@ a {
   grid-column: span 2;
 }
 
+.bento-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 10px;
+}
+
 .bento-sub-metric {
   display: flex;
   flex-direction: column;
@@ -2861,6 +2868,20 @@ a {
   opacity: 0;
   transform: translateY(24px);
   animation: fadeUpIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.solutions-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 /* Premium Solution Cards */
@@ -3536,9 +3557,26 @@ a {
   .industries-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .bento-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 768px) {
+  .solutions-header {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
   /* Scrollable Navigation for short screens/landscape orientation */
   .nav-menu {
     overflow-y: auto !important;
@@ -3603,6 +3641,10 @@ a {
 @media (max-width: 576px) {
   .industries-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bento-metrics-grid {
+    grid-template-columns: 1fr !important;
   }
 
   /* Compact padding for cards on small screens */
