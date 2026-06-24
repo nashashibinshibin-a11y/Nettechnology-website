@@ -2893,11 +2893,13 @@ a {
   overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
+  justify-content: flex-end !important;
   box-shadow: 0 8px 30px rgba(2, 4, 12, 0.6) !important;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
   position: relative !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  height: 480px !important; /* Full card height */
 }
 
 .solution-card::after {
@@ -2916,7 +2918,7 @@ a {
 .solution-card:hover {
   transform: translateY(-8px) !important;
   border-color: rgba(30, 91, 255, 0.45) !important;
-  box-shadow: 0 15px 40px rgba(30, 91, 255, 0.15) !important;
+  box-shadow: 0 20px 45px rgba(30, 91, 255, 0.25) !important;
 }
 
 .solution-card:hover::after {
@@ -2924,9 +2926,11 @@ a {
 }
 
 .solution-card-img-wrapper {
-  width: 100%;
-  height: 200px;
-  position: relative;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
   overflow: hidden;
 }
 
@@ -2936,19 +2940,34 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 2;
 }
 
 .solution-card:hover .solution-card-img-wrapper img {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .solution-card-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(18, 20, 28, 0.9));
-  z-index: 3;
+  background: linear-gradient(to bottom, rgba(8, 9, 12, 0.1) 0%, rgba(8, 9, 12, 0.65) 50%, rgba(8, 9, 12, 0.98) 100%) !important;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.solution-card:hover .solution-card-img-overlay {
+  background: linear-gradient(to bottom, rgba(8, 9, 12, 0.3) 0%, rgba(8, 9, 12, 0.78) 40%, rgba(8, 9, 12, 1) 100%) !important;
+}
+
+.solution-card-body {
+  position: relative !important;
+  z-index: 3 !important;
+  padding: 32px 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  width: 100% !important;
 }
 
 .solution-card-icon-wrapper {
@@ -2974,7 +2993,7 @@ a {
 
 .solution-card-title {
   font-size: 1.3rem;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   font-weight: 700;
   color: #F0F4FF;
   transition: color 0.3s ease;
@@ -2982,6 +3001,72 @@ a {
 
 .solution-card:hover .solution-card-title {
   color: #FFFFFF;
+}
+
+/* Slide-up Details Container */
+.solution-card-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.solution-card:hover .solution-card-details {
+  max-height: 320px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.solution-card-details > * {
+  transform: translateY(15px);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.solution-card:hover .solution-card-details > * {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.solution-card:hover .solution-card-details .solution-card-desc {
+  transition-delay: 0.05s;
+}
+
+.solution-card:hover .solution-card-details .solution-card-features {
+  transition-delay: 0.1s;
+}
+
+.solution-card:hover .solution-card-details .solution-card-link {
+  transition-delay: 0.15s;
+}
+
+.solution-card-desc {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 16px !important;
+}
+
+.solution-card-features {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 20px 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.solution-card-features li {
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.solution-card-features li i, .solution-card-features li svg {
+  color: #00C2CB !important;
+  flex-shrink: 0 !important;
 }
 
 .solution-card-link {
@@ -2992,7 +3077,6 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: auto;
   transition: all 0.3s ease;
 }
 
