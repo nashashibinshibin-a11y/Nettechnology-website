@@ -12,13 +12,13 @@
    ========================================================= */
 :root {
   /* Background Layers */
-  --bg-base:        #030914;
-  --bg-mid:         #050D20;
+  --bg-base:        #08090c;
+  --bg-mid:         #0c0d12;
   --bg-elevated:    rgba(255, 255, 255, 0.04);
-  --bg-card:        #0A1128;
-  --bg-dark:        #030914;
-  --bg-navy:        #050D20;
-  --bg-footer:      #02060E;
+  --bg-card:        #12141c;
+  --bg-dark:        #08090c;
+  --bg-navy:        #0c0d12;
+  --bg-footer:      #040507;
 
   /* Accent Colors */
   --accent-teal:    #0F62FE; /* Royal blue */
@@ -174,7 +174,7 @@ a {
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: #030914;
+  background: var(--bg-base);
   pointer-events: none;
 }
 
@@ -829,7 +829,7 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(10, 17, 40, 0.75);
+  background: rgba(18, 20, 28, 0.75);
   border: 1px solid rgba(15, 98, 254, 0.15);
   padding: 6px 12px;
   border-radius: 20px;
@@ -913,7 +913,7 @@ a {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  background: rgba(10, 17, 40, 0.55);
+  background: rgba(18, 20, 28, 0.55);
   border: 1px solid rgba(15, 98, 254, 0.12);
   border-radius: 16px;
   padding: 24px;
@@ -1252,7 +1252,7 @@ a {
 }
 
 .bento-card {
-  background: rgba(10, 17, 40, 0.45);
+  background: rgba(18, 20, 28, 0.45);
   border: 1px solid rgba(15, 98, 254, 0.12);
   border-radius: 20px;
   padding: 36px 30px;
@@ -1598,7 +1598,7 @@ a {
   text-align: center;
   padding: 40px 30px;
   border-radius: 20px;
-  background: rgba(10, 17, 40, 0.45);
+  background: rgba(18, 20, 28, 0.45);
   border: 1px solid rgba(15, 98, 254, 0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2527,7 +2527,7 @@ a {
   font-size: 7.5px;
   font-weight: 700;
   color: rgba(176, 190, 220, 0.65);
-  background: rgba(5, 13, 32, 0.7);
+  background: rgba(12, 13, 18, 0.7);
   border: 1px solid rgba(15, 98, 254, 0.15);
   padding: 4px 8px;
   border-radius: 4px;
@@ -2549,7 +2549,7 @@ a {
 }
 
 .about-bento-card {
-  background: rgba(10, 17, 40, 0.45);
+  background: rgba(18, 20, 28, 0.45);
   border: 1px solid rgba(15, 98, 254, 0.12);
   border-radius: 20px;
   padding: 36px 30px;
@@ -2886,7 +2886,7 @@ a {
 
 /* Premium Solution Cards */
 .solution-card {
-  background: rgba(10, 17, 40, 0.6) !important;
+  background: rgba(18, 20, 28, 0.6) !important;
   border: 1px solid rgba(0, 194, 203, 0.15) !important;
   border-radius: 16px !important;
   padding: 0 !important;
@@ -2947,7 +2947,7 @@ a {
 .solution-card-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(10, 17, 40, 0.9));
+  background: linear-gradient(to bottom, transparent 40%, rgba(18, 20, 28, 0.9));
   z-index: 3;
 }
 
@@ -3014,7 +3014,7 @@ a {
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
-  background: rgba(10, 17, 40, 0.45);
+  background: rgba(18, 20, 28, 0.45);
   border: 1px solid rgba(0, 194, 203, 0.15);
   border-radius: 24px;
   padding: 50px;
@@ -3148,7 +3148,7 @@ a {
   color: #00C2CB !important;
 }
 .solution-card.card-av:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(0, 194, 203, 0.06) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 194, 203, 0.06) 85%) !important;
   border-color: rgba(0, 194, 203, 0.45) !important;
   box-shadow: 0 20px 45px rgba(0, 194, 203, 0.22), inset 0 0 25px rgba(0, 194, 203, 0.1) !important;
 }
@@ -3178,7 +3178,7 @@ a {
   color: #1E5BFF !important;
 }
 .solution-card.card-elv:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(30, 91, 255, 0.06) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(30, 91, 255, 0.06) 85%) !important;
   border-color: rgba(30, 91, 255, 0.45) !important;
   box-shadow: 0 20px 45px rgba(30, 91, 255, 0.22), inset 0 0 25px rgba(30, 91, 255, 0.1) !important;
 }
@@ -3208,7 +3208,7 @@ a {
   color: #8A2BE2 !important;
 }
 .solution-card.card-ict:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(138, 43, 226, 0.06) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(138, 43, 226, 0.06) 85%) !important;
   border-color: rgba(138, 43, 226, 0.45) !important;
   box-shadow: 0 20px 45px rgba(138, 43, 226, 0.22), inset 0 0 25px rgba(138, 43, 226, 0.1) !important;
 }
@@ -3238,7 +3238,7 @@ a {
   color: #00E5FF !important;
 }
 .solution-card.card-automation:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(0, 229, 255, 0.06) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 229, 255, 0.06) 85%) !important;
   border-color: rgba(0, 229, 255, 0.45) !important;
   box-shadow: 0 20px 45px rgba(0, 229, 255, 0.22), inset 0 0 25px rgba(0, 229, 255, 0.1) !important;
 }
@@ -3268,7 +3268,7 @@ a {
   color: #FF3264 !important;
 }
 .solution-card.card-security:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(255, 50, 100, 0.06) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(255, 50, 100, 0.06) 85%) !important;
   border-color: rgba(255, 50, 100, 0.45) !important;
   box-shadow: 0 20px 45px rgba(255, 50, 100, 0.22), inset 0 0 25px rgba(255, 50, 100, 0.1) !important;
 }
@@ -3298,7 +3298,7 @@ a {
   color: #32CD32 !important;
 }
 .solution-card.card-specialized:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(50, 205, 50, 0.06) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(50, 205, 50, 0.06) 85%) !important;
   border-color: rgba(50, 205, 50, 0.45) !important;
   box-shadow: 0 20px 45px rgba(50, 205, 50, 0.22), inset 0 0 25px rgba(50, 205, 50, 0.1) !important;
 }
@@ -3333,7 +3333,7 @@ a {
 }
 
 .industry-card {
-  background: rgba(10, 17, 40, 0.45) !important;
+  background: rgba(18, 20, 28, 0.45) !important;
   border: 1px solid rgba(255, 255, 255, 0.04) !important;
   border-radius: 16px !important;
   padding: 32px 24px !important;
@@ -3422,7 +3422,7 @@ a {
   background: rgba(30, 91, 255, 0.08);
 }
 .industry-card.card-commercial:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(30, 91, 255, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(30, 91, 255, 0.05) 85%) !important;
   border-color: rgba(30, 91, 255, 0.35) !important;
   box-shadow: 0 15px 35px rgba(30, 91, 255, 0.15), inset 0 0 20px rgba(30, 91, 255, 0.06) !important;
 }
@@ -3439,7 +3439,7 @@ a {
   background: rgba(0, 194, 203, 0.08);
 }
 .industry-card.card-corporate:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(0, 194, 203, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 194, 203, 0.05) 85%) !important;
   border-color: rgba(0, 194, 203, 0.35) !important;
   box-shadow: 0 15px 35px rgba(0, 194, 203, 0.15), inset 0 0 20px rgba(0, 194, 203, 0.06) !important;
 }
@@ -3456,7 +3456,7 @@ a {
   background: rgba(212, 163, 89, 0.08);
 }
 .industry-card.card-hospitality:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(212, 163, 89, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(212, 163, 89, 0.05) 85%) !important;
   border-color: rgba(212, 163, 89, 0.35) !important;
   box-shadow: 0 15px 35px rgba(212, 163, 89, 0.15), inset 0 0 20px rgba(212, 163, 89, 0.06) !important;
 }
@@ -3473,7 +3473,7 @@ a {
   background: rgba(50, 205, 50, 0.08);
 }
 .industry-card.card-education:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(50, 205, 50, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(50, 205, 50, 0.05) 85%) !important;
   border-color: rgba(50, 205, 50, 0.35) !important;
   box-shadow: 0 15px 35px rgba(50, 205, 50, 0.15), inset 0 0 20px rgba(50, 205, 50, 0.06) !important;
 }
@@ -3490,7 +3490,7 @@ a {
   background: rgba(0, 229, 255, 0.08);
 }
 .industry-card.card-healthcare:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(0, 229, 255, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 229, 255, 0.05) 85%) !important;
   border-color: rgba(0, 229, 255, 0.35) !important;
   box-shadow: 0 15px 35px rgba(0, 229, 255, 0.15), inset 0 0 20px rgba(0, 229, 255, 0.06) !important;
 }
@@ -3507,7 +3507,7 @@ a {
   background: rgba(255, 50, 100, 0.08);
 }
 .industry-card.card-retail:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(255, 50, 100, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(255, 50, 100, 0.05) 85%) !important;
   border-color: rgba(255, 50, 100, 0.35) !important;
   box-shadow: 0 15px 35px rgba(255, 50, 100, 0.15), inset 0 0 20px rgba(255, 50, 100, 0.06) !important;
 }
@@ -3524,7 +3524,7 @@ a {
   background: rgba(0, 194, 203, 0.08);
 }
 .industry-card.card-residential:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(0, 194, 203, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(0, 194, 203, 0.05) 85%) !important;
   border-color: rgba(0, 194, 203, 0.35) !important;
   box-shadow: 0 15px 35px rgba(0, 194, 203, 0.15), inset 0 0 20px rgba(0, 194, 203, 0.06) !important;
 }
@@ -3541,7 +3541,7 @@ a {
   background: rgba(138, 43, 226, 0.08);
 }
 .industry-card.card-government:hover {
-  background: linear-gradient(135deg, rgba(10, 17, 40, 0.75), rgba(138, 43, 226, 0.05) 85%) !important;
+  background: linear-gradient(135deg, rgba(18, 20, 28, 0.75), rgba(138, 43, 226, 0.05) 85%) !important;
   border-color: rgba(138, 43, 226, 0.35) !important;
   box-shadow: 0 15px 35px rgba(138, 43, 226, 0.15), inset 0 0 20px rgba(138, 43, 226, 0.06) !important;
 }

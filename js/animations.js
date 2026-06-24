@@ -834,8 +834,8 @@ function initHeroNetworkCanvas() {
     const H = canvas.height;
     const t = performance.now();
 
-    // 1. Base brand navy canvas
-    ctx.fillStyle = '#030914';
+    // 1. Base brand dark off-black canvas
+    ctx.fillStyle = '#08090c';
     ctx.fillRect(0, 0, W, H);
 
     // 2. Parallax mouse easing
@@ -850,8 +850,8 @@ function initHeroNetworkCanvas() {
       W * 0.3 + pxOffsetX * 20, H * 0.4 + pxOffsetY * 20, W * 0.45
     );
     blueGlow.addColorStop(0, 'rgba(15, 98, 254, 0.12)');
-    blueGlow.addColorStop(0.5, 'rgba(3, 9, 20, 0.01)');
-    blueGlow.addColorStop(1, 'rgba(3, 9, 20, 0)');
+    blueGlow.addColorStop(0.5, 'rgba(8, 9, 12, 0.01)');
+    blueGlow.addColorStop(1, 'rgba(8, 9, 12, 0)');
     ctx.fillStyle = blueGlow;
     ctx.fillRect(0, 0, W, H);
 
@@ -860,8 +860,8 @@ function initHeroNetworkCanvas() {
       W * 0.7 + pxOffsetX * 25, H * 0.5 + pxOffsetY * 25, W * 0.4
     );
     cyanGlow.addColorStop(0, 'rgba(0, 194, 203, 0.09)');
-    cyanGlow.addColorStop(0.5, 'rgba(3, 9, 20, 0.01)');
-    cyanGlow.addColorStop(1, 'rgba(3, 9, 20, 0)');
+    cyanGlow.addColorStop(0.5, 'rgba(8, 9, 12, 0.01)');
+    cyanGlow.addColorStop(1, 'rgba(8, 9, 12, 0)');
     ctx.fillStyle = cyanGlow;
     ctx.fillRect(0, 0, W, H);
 
@@ -873,16 +873,16 @@ function initHeroNetworkCanvas() {
     // 5. Vignette Darkening (keeps headlines legible)
     const rCenter = Math.hypot(W * 0.5, H * 0.5);
     const vignette = ctx.createRadialGradient(W * 0.5, H * 0.5, rCenter * 0.2, W * 0.5, H * 0.5, rCenter);
-    vignette.addColorStop(0, 'rgba(3, 9, 20, 0)');
-    vignette.addColorStop(0.6, 'rgba(3, 9, 20, 0.4)');
-    vignette.addColorStop(1, 'rgba(3, 9, 20, 0.95)');
+    vignette.addColorStop(0, 'rgba(8, 9, 12, 0)');
+    vignette.addColorStop(0.6, 'rgba(8, 9, 12, 0.4)');
+    vignette.addColorStop(1, 'rgba(8, 9, 12, 0.95)');
     ctx.fillStyle = vignette;
     ctx.fillRect(0, 0, W, H);
 
     // 6. Bottom edge fade
     const bottomFade = ctx.createLinearGradient(0, H * 0.7, 0, H);
-    bottomFade.addColorStop(0, 'rgba(3, 9, 20, 0)');
-    bottomFade.addColorStop(1, '#030914');
+    bottomFade.addColorStop(0, 'rgba(8, 9, 12, 0)');
+    bottomFade.addColorStop(1, '#08090c');
     ctx.fillStyle = bottomFade;
     ctx.fillRect(0, 0, W, H);
 
