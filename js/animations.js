@@ -1,5 +1,7 @@
 // GSAP and ScrollTrigger Animation Orchestration
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroNetworkCanvas();
+
   // Respect user preference for reduced motion
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
@@ -697,5 +699,242 @@ window.addEventListener('load', () => {
     ScrollTrigger.refresh();
   }
 });
+
+// =========================================================
+// Hero Abstract Animated Wave Light Trails Canvas Effect
+// =========================================================
+function initHeroNetworkCanvas() {
+  const canvas = document.getElementById('network-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let animationFrameId;
+
+  // Mouse parallax tracking
+  let mouseX = window.innerWidth * 0.5;
+  let mouseY = window.innerHeight * 0.5;
+  let targetMouseX = window.innerWidth * 0.5;
+  let targetMouseY = window.innerHeight * 0.5;
+
+  function onMouseMove(e) {
+    const rect = canvas.getBoundingClientRect();
+    targetMouseX = e.clientX - rect.left;
+    targetMouseY = e.clientY - rect.top;
+  }
+  window.addEventListener('mousemove', onMouseMove, { passive: true });
+
+  // Resize handler scoped to parent dimensions
+  function resizeCanvas() {
+    const parent = canvas.parentElement || document.body;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const width = parent.clientWidth;
+    const height = parent.clientHeight;
+    
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Check reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Multi-layered light trail ribbon wave configurations
+  const ribbons = [
+    {
+      numStrands: 46,
+      baseFraction: 0.48,
+      speed: 0.12,
+      phase: 0,
+      freq1: 0.95,
+      freq2: 0.65,
+      amp1: 60,
+      amp2: 28,
+      squeezeFreq: 1.25,
+      spread: 38,
+      strandFreq: 1.9,
+      strandOffset: 0.08,
+      color1: { r: 47, g: 98, b: 253 },   // Electric Blue (#2F62FD)
+      color2: { r: 120, g: 175, b: 255 }, // Soft Light Blue
+      baseAlpha: 0.085,
+      lineWidth: 1.05,
+      depth: 16
+    },
+    {
+      numStrands: 40,
+      baseFraction: 0.54,
+      speed: 0.095,
+      phase: Math.PI * 0.5,
+      freq1: 0.75,
+      freq2: 1.15,
+      amp1: 65,
+      amp2: 32,
+      squeezeFreq: 0.95,
+      spread: 44,
+      strandFreq: 1.6,
+      strandOffset: 0.07,
+      color1: { r: 0, g: 194, b: 203 },   // Cyan / Teal
+      color2: { r: 47, g: 98, b: 253 },   // Electric Blue
+      baseAlpha: 0.070,
+      lineWidth: 0.95,
+      depth: 22
+    },
+    {
+      numStrands: 34,
+      baseFraction: 0.42,
+      speed: 0.075,
+      phase: Math.PI * 1.05,
+      freq1: 1.1,
+      freq2: 0.8,
+      amp1: 45,
+      amp2: 22,
+      squeezeFreq: 1.35,
+      spread: 30,
+      strandFreq: 2.2,
+      strandOffset: 0.09,
+      color1: { r: 30, g: 75, b: 215 },   // Deep Royal Blue
+      color2: { r: 0, g: 180, b: 220 },   // Subtle Cyan
+      baseAlpha: 0.055,
+      lineWidth: 0.85,
+      depth: 10
+    }
+  ];
+
+  function getStrandY(x, s, W, H, t, pxOffsetY, config) {
+    const timeSec = t * 0.001 * config.speed;
+    
+    // Base ribbon path curve
+    const baseAngle1 = (x / W) * config.freq1 * Math.PI * 2 + timeSec * 0.7 + config.phase;
+    const baseAngle2 = (x / W) * config.freq2 * Math.PI * 2 - timeSec * 0.4 + config.phase;
+    const yBase = H * config.baseFraction + Math.sin(baseAngle1) * config.amp1 + Math.cos(baseAngle2) * config.amp2;
+
+    // Squeezing and fanning logic
+    const squeezeAngle = (x / W) * config.squeezeFreq * Math.PI * 2 + timeSec * 0.25;
+    const squeeze = Math.sin(squeezeAngle);
+    const maxOffset = config.spread * (1.0 + 0.65 * squeeze);
+
+    // Individual strand offset calculation
+    const strandAngle = (x / W) * config.strandFreq * Math.PI * 2 + timeSec * 1.1 + s * config.strandOffset;
+    const offset = Math.sin(strandAngle) * maxOffset;
+
+    return yBase + offset + pxOffsetY * config.depth;
+  }
+
+  function drawRibbon(ctx, W, H, t, pxOffsetX, pxOffsetY, config) {
+    const numStrands = config.numStrands;
+    const steps = 75; // Smooth high-fidelity curves across screen
+    const segmentWidth = (W + 120) / steps;
+    const startX = -60;
+
+    for (let s = 0; s < numStrands; s++) {
+      const ratio = s / numStrands;
+      const r = Math.round(config.color1.r * (1 - ratio) + config.color2.r * ratio);
+      const g = Math.round(config.color1.g * (1 - ratio) + config.color2.g * ratio);
+      const b = Math.round(config.color1.b * (1 - ratio) + config.color2.b * ratio);
+      
+      // Strand alpha breathing animation
+      const alpha = config.baseAlpha * (0.65 + 0.35 * Math.sin(s * 0.12 + t * 0.0007)) * (1.0 - Math.abs(ratio - 0.5) * 0.45);
+
+      ctx.save();
+      ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      ctx.lineWidth = config.lineWidth;
+      ctx.beginPath();
+
+      const initialX = startX + pxOffsetX * config.depth * 0.5;
+      const initialY = getStrandY(initialX - pxOffsetX * config.depth * 0.5, s, W, H, t, pxOffsetY, config);
+      ctx.moveTo(initialX, initialY);
+
+      for (let i = 1; i <= steps; i++) {
+        const localX = startX + i * segmentWidth;
+        const screenX = localX + pxOffsetX * config.depth * 0.5;
+        const screenY = getStrandY(localX, s, W, H, t, pxOffsetY, config);
+        ctx.lineTo(screenX, screenY);
+      }
+
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  // Animation Loop
+  function renderFrame(t) {
+    const parent = canvas.parentElement || document.body;
+    const W = parent.clientWidth;
+    const H = parent.clientHeight;
+
+    // 1. Base dark background (#030305)
+    ctx.fillStyle = '#030305';
+    ctx.fillRect(0, 0, W, H);
+
+    // 2. Parallax mouse easing
+    mouseX += (targetMouseX - mouseX) * 0.035;
+    mouseY += (targetMouseY - mouseY) * 0.035;
+    const pxOffsetX = (mouseX - W * 0.5) / W;
+    const pxOffsetY = (mouseY - H * 0.5) / H;
+
+    // 3. Ambient Backlights (Soft Royal Blue & Cyan glowing pools)
+    const blueGlow = ctx.createRadialGradient(
+      W * 0.35 + pxOffsetX * 20, H * 0.45 + pxOffsetY * 20, 0,
+      W * 0.35 + pxOffsetX * 20, H * 0.45 + pxOffsetY * 20, W * 0.45
+    );
+    blueGlow.addColorStop(0, 'rgba(47, 98, 253, 0.12)');
+    blueGlow.addColorStop(0.5, 'rgba(3, 3, 5, 0.02)');
+    blueGlow.addColorStop(1, 'rgba(3, 3, 5, 0)');
+    ctx.fillStyle = blueGlow;
+    ctx.fillRect(0, 0, W, H);
+
+    const cyanGlow = ctx.createRadialGradient(
+      W * 0.68 + pxOffsetX * 25, H * 0.52 + pxOffsetY * 25, 0,
+      W * 0.68 + pxOffsetX * 25, H * 0.52 + pxOffsetY * 25, W * 0.40
+    );
+    cyanGlow.addColorStop(0, 'rgba(0, 194, 203, 0.08)');
+    cyanGlow.addColorStop(0.5, 'rgba(3, 3, 5, 0.01)');
+    cyanGlow.addColorStop(1, 'rgba(3, 3, 5, 0)');
+    ctx.fillStyle = cyanGlow;
+    ctx.fillRect(0, 0, W, H);
+
+    // 4. Render Flowing Wave Light Trails
+    ribbons.forEach((ribbon) => {
+      drawRibbon(ctx, W, H, t, pxOffsetX, pxOffsetY, ribbon);
+    });
+
+    // 5. Center Vignette Soft Darkening (Keeps headline completely legible)
+    const rCenter = Math.hypot(W * 0.5, H * 0.5);
+    const vignette = ctx.createRadialGradient(W * 0.5, H * 0.5, rCenter * 0.15, W * 0.5, H * 0.5, rCenter);
+    vignette.addColorStop(0, 'rgba(3, 3, 5, 0)');
+    vignette.addColorStop(0.65, 'rgba(3, 3, 5, 0.35)');
+    vignette.addColorStop(1, 'rgba(3, 3, 5, 0.95)');
+    ctx.fillStyle = vignette;
+    ctx.fillRect(0, 0, W, H);
+
+    // 6. Bottom edge fade for seamless blend into subsequent sections
+    const bottomFade = ctx.createLinearGradient(0, H * 0.72, 0, H);
+    bottomFade.addColorStop(0, 'rgba(3, 3, 5, 0)');
+    bottomFade.addColorStop(1, '#030305');
+    ctx.fillStyle = bottomFade;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  function animate() {
+    renderFrame(performance.now());
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  if (prefersReducedMotion) {
+    renderFrame(0);
+  } else {
+    animate();
+  }
+
+  // Cleanup handler
+  return () => {
+    window.removeEventListener('mousemove', onMouseMove);
+    window.removeEventListener('resize', resizeCanvas);
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+  };
+}
 
 

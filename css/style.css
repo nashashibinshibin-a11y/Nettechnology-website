@@ -495,18 +495,20 @@ a {
 }
 
 /* =========================================================
-   11. HERO — HOME (Scroll-Driven Cinematic Pinned Layout)
+   11. HERO — HOME (Abstract Animated Wave Light Trails)
    ========================================================= */
 .hero-pinned-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: #030305;
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 60px;
 }
 
 .hero-pinned-layout {
@@ -563,7 +565,7 @@ a {
 .hero-tagline {
   font-size: 16px;
   color: rgba(176, 190, 220, 0.65);
-  max-width: 540px;
+  max-width: 580px;
   line-height: 1.8;
   margin: 0 auto 36px auto;
   text-align: center;
@@ -634,8 +636,21 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   z-index: 5;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+}
+
+.scroll-indicator.fade-up-animate {
+  animation: fadeUpInScroll 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUpInScroll {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 .scroll-mouse {
@@ -662,219 +677,6 @@ a {
   0%   { top: 5px; opacity: 1; }
   60%  { top: 14px; opacity: 0; }
   100% { top: 5px; opacity: 0; }
-}
-
-/* =========================================================
-   11b. HERO IMAGE-SEQUENCE CANVAS & OVERLAY
-   ========================================================= */
-#hero-sequence-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-sequence-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    /* Central darkening for text readability */
-    radial-gradient(ellipse 70% 50% at 50% 45%, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0.45) 100%),
-    /* Bottom edge gradient for seamless transition to services section */
-    linear-gradient(to bottom, transparent 60%, rgba(3, 3, 5, 0.6) 82%, #030305 100%);
-  pointer-events: none;
-}
-
-/* Hero Sequence Loader */
-.hero-sequence-loader {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.hero-loader-text {
-  font-size: 0.68rem;
-  font-family: var(--font-heading);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(176, 190, 220, 0.45);
-}
-
-.hero-loader-bar {
-  width: 120px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.hero-loader-bar-fill {
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(47, 98, 253, 0.6), rgba(0, 194, 203, 0.6));
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-/* =========================================================
-   11c. HERO SCROLL-DRIVEN OVERLAY STORY CARDS
-   ========================================================= */
-.hero-overlay-cards {
-  position: absolute;
-  inset: 0;
-  z-index: 12;
-  pointer-events: none;
-}
-
-.hero-story-card {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0;
-  width: 100%;
-  max-width: 340px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  z-index: 12;
-  transition: none; /* Controlled by GSAP scrubbing */
-}
-
-/* Quadrant positioning on desktop */
-#card-workplace {
-  bottom: 120px;
-  left: 80px;
-}
-
-#card-collaboration {
-  bottom: 120px;
-  right: 80px;
-  left: auto;
-}
-
-#card-systems {
-  top: 140px;
-  right: 80px;
-  left: auto;
-  bottom: auto;
-}
-
-#card-connected {
-  bottom: 120px;
-  left: 80px;
-}
-
-.story-card-inner {
-  background: rgba(5, 7, 18, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 194, 203, 0.15);
-  border-top: 2px solid rgba(0, 194, 203, 0.7); /* Cyber teal accent top border */
-  border-radius: 14px;
-  padding: 22px 26px;
-  text-align: left;
-  position: relative;
-  box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
-}
-
-/* Subtle corner tech-bracket highlights */
-.story-card-inner::before {
-  content: '';
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid rgba(0, 194, 203, 0.4);
-  border-right: 1px solid rgba(0, 194, 203, 0.4);
-}
-
-.story-card-inner::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
-  width: 5px;
-  height: 5px;
-  border-bottom: 1px solid rgba(0, 194, 203, 0.4);
-  border-left: 1px solid rgba(0, 194, 203, 0.4);
-}
-
-.story-card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: rgba(0, 194, 203, 0.08);
-  border: 1px solid rgba(0, 194, 203, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(0, 194, 203, 0.95);
-  margin-bottom: 14px;
-}
-
-.story-card-label {
-  display: inline-block;
-  font-size: 0.6rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(176, 190, 220, 0.45);
-  font-weight: 700;
-  font-family: monospace;
-  margin-bottom: 6px;
-}
-
-.story-card-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #F0F4FF;
-  letter-spacing: -0.5px;
-  line-height: 1.25;
-  margin: 0 0 8px 0;
-  font-family: var(--font-heading);
-}
-
-.story-card-desc {
-  font-size: 0.8rem;
-  color: rgba(176, 190, 220, 0.6);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Mobile adjustments for story cards */
-@media (max-width: 768px) {
-  .hero-story-card {
-    left: 50% !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: 60px !important;
-    max-width: 100% !important;
-    padding: 0 16px !important;
-  }
-
-  .story-card-inner {
-    padding: 20px 24px;
-    border-radius: 12px;
-  }
-
-  .story-card-title {
-    font-size: 1.05rem;
-  }
-
-  .story-card-desc {
-    font-size: 0.78rem;
-  }
 }
 
 /* =========================================================

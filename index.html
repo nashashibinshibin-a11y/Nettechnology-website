@@ -46,29 +46,24 @@
     </div>
   </header>
 
-  <!-- ============ HERO SECTION — SCROLL-DRIVEN CINEMATIC ============ -->
-  <section id="hero-cinematic" class="hero-pinned-container">
-    <canvas id="hero-sequence-canvas"></canvas>
-    <div class="hero-sequence-overlay"></div>
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero-pinned-container">
+    <canvas id="network-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></canvas>
 
-    <!-- Subtle loading indicator -->
-    <div id="hero-sequence-loader" class="hero-sequence-loader">
-      <span class="hero-loader-text">Loading</span>
-      <div class="hero-loader-bar">
-        <div class="hero-loader-bar-fill"></div>
-      </div>
-    </div>
-
-    <!-- Initial Hero Content (fades out as scroll begins) -->
+    <!-- Integrated layout: Headline and CTA centered natively over the flowing light trail environment -->
     <div class="container hero-pinned-layout">
+      <!-- Centered Text Content -->
       <div class="hero-content">
         <span class="hero-eyebrow fade-up-animate" style="animation-delay: 0.1s;">SYSTEMS INTEGRATION SPECIALISTS</span>
+        
         <h1 class="hero-title fade-up-animate" style="animation-delay: 0.25s;">
           Powering <span class="gradient-text">Intelligent Environments</span>
         </h1>
+        
         <p class="hero-tagline fade-up-animate" style="animation-delay: 0.4s;">
           Leading systems integrator specializing in AV Solutions, ELV Systems, ICT Infrastructure, Security Systems, and Smart Automation for modern commercial and residential developments.
         </p>
+        
         <div class="hero-actions fade-up-animate" style="animation-delay: 0.55s;">
           <a href="services.html" class="btn hero-btn-primary">
             <span>Explore Solutions</span> 
@@ -82,55 +77,13 @@
       </div>
     </div>
 
-    <!-- Scroll-driven Overlay Cards (fade in/out during the journey) -->
-    <div class="hero-overlay-cards">
-
-      <div id="card-workplace" class="hero-story-card">
-        <div class="story-card-inner">
-          <div class="story-card-icon"><i data-lucide="monitor" style="width:20px;height:20px;"></i></div>
-          <span class="story-card-label">Modern Workplace</span>
-          <h2 class="story-card-title">Connected Work Environments</h2>
-          <p class="story-card-desc">Smart office spaces designed for productivity, collaboration, and seamless connectivity.</p>
-        </div>
-      </div>
-
-      <div id="card-collaboration" class="hero-story-card">
-        <div class="story-card-inner">
-          <div class="story-card-icon"><i data-lucide="users" style="width:20px;height:20px;"></i></div>
-          <span class="story-card-label">Collaboration</span>
-          <h2 class="story-card-title">Collaboration Environments</h2>
-          <p class="story-card-desc">Hybrid meeting rooms and boardrooms equipped with enterprise AV and video conferencing.</p>
-        </div>
-      </div>
-
-      <div id="card-systems" class="hero-story-card">
-        <div class="story-card-inner">
-          <div class="story-card-icon"><i data-lucide="layers" style="width:20px;height:20px;"></i></div>
-          <span class="story-card-label">AV & ELV Systems</span>
-          <h2 class="story-card-title">Integrated Infrastructure Control</h2>
-          <p class="story-card-desc">Digital signage, building management, lighting control, and smart security systems.</p>
-        </div>
-      </div>
-
-      <div id="card-connected" class="hero-story-card">
-        <div class="story-card-inner">
-          <div class="story-card-icon"><i data-lucide="cpu" style="width:20px;height:20px;"></i></div>
-          <span class="story-card-label">Connected Intelligence</span>
-          <h2 class="story-card-title">Connected Intelligent Environment</h2>
-          <p class="story-card-desc">Where every system converges into a unified, intelligent infrastructure.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Scroll indicator at the bottom -->
+    <!-- Scroll indicator at bottom -->
     <div class="scroll-indicator fade-up-animate" style="animation-delay: 0.7s;">
       <div class="scroll-mouse">
         <div class="scroll-wheel"></div>
       </div>
-      <span>Scroll to Explore</span>
+      <span>Scroll</span>
     </div>
-
   </section>
 
 
@@ -588,7 +541,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="js/hero-sequence.js?v=6.0"></script>
   <script src="js/main.js?v=6.0"></script>
   <script src="js/animations.js?v=6.0"></script>
   <script>lucide.createIcons();</script>
