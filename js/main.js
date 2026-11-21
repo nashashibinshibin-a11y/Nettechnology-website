@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Contact Form Mock Submission Handlers
-  const contactForm = document.getElementById('abc-contact-form');
+  const contactForm = document.getElementById('nexora-contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();

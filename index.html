@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABC Tech — Systems Integrator & AV, ELV, ICT Solutions</title>
-  <meta name="description" content="ABC Tech is a UAE-based premium system integrator delivering advanced AV Solutions, ELV Systems, ICT Solutions, and Annual Maintenance Contracts (AMC).">
-  <link rel="stylesheet" href="css/style.css?v=5.9">
+  <title>Nexora Global — Systems Integrator &amp; AV, ELV, ICT Solutions</title>
+  <meta name="description" content="Nexora Global is a UAE-based premium system integrator delivering advanced AV Solutions, ELV Systems, ICT Solutions, and Annual Maintenance Contracts (AMC).">
+  <link rel="stylesheet" href="css/style.css?v=6.0">
 </head>
 <body>
 
@@ -20,14 +20,9 @@
   <!-- Navigation -->
   <header class="navbar">
     <div class="container">
-      <a href="index.html" class="logo-link">
-        <div class="logo-icon">
-          <div class="logo-shape-1"></div>
-          <div class="logo-shape-2"></div>
-        </div>
-        <div class="logo-text">
-          <span class="logo-title">ABC</span>
-          <span class="logo-subtitle">TECHNOLOGIES</span>
+      <a href="index.html" class="logo-link" aria-label="Nexora Global">
+        <div class="logo-img-wrapper">
+          <img src="logo/nexora-logo.png" alt="Nexora Global" class="site-logo">
         </div>
       </a>
       
@@ -51,25 +46,29 @@
     </div>
   </header>
 
-  <!-- ============ HERO SECTION ============ -->
-  <section class="hero-pinned-container">
-    <canvas id="network-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; filter: blur(0.5px); pointer-events: none;"></canvas>
+  <!-- ============ HERO SECTION — SCROLL-DRIVEN CINEMATIC ============ -->
+  <section id="hero-cinematic" class="hero-pinned-container">
+    <canvas id="hero-sequence-canvas"></canvas>
+    <div class="hero-sequence-overlay"></div>
 
-    <!-- Integrated layout: Headline and CTA centered natively over the cinematic environment -->
+    <!-- Subtle loading indicator -->
+    <div id="hero-sequence-loader" class="hero-sequence-loader">
+      <span class="hero-loader-text">Loading</span>
+      <div class="hero-loader-bar">
+        <div class="hero-loader-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Initial Hero Content (fades out as scroll begins) -->
     <div class="container hero-pinned-layout">
-      <!-- Centered Text Content -->
       <div class="hero-content">
-        
         <span class="hero-eyebrow fade-up-animate" style="animation-delay: 0.1s;">SYSTEMS INTEGRATION SPECIALISTS</span>
-        
         <h1 class="hero-title fade-up-animate" style="animation-delay: 0.25s;">
           Powering <span class="gradient-text">Intelligent Environments</span>
         </h1>
-        
         <p class="hero-tagline fade-up-animate" style="animation-delay: 0.4s;">
           Leading systems integrator specializing in AV Solutions, ELV Systems, ICT Infrastructure, Security Systems, and Smart Automation for modern commercial and residential developments.
         </p>
-        
         <div class="hero-actions fade-up-animate" style="animation-delay: 0.55s;">
           <a href="services.html" class="btn hero-btn-primary">
             <span>Explore Solutions</span> 
@@ -83,12 +82,53 @@
       </div>
     </div>
 
+    <!-- Scroll-driven Overlay Cards (fade in/out during the journey) -->
+    <div class="hero-overlay-cards">
+
+      <div id="card-workplace" class="hero-story-card">
+        <div class="story-card-inner">
+          <div class="story-card-icon"><i data-lucide="monitor" style="width:20px;height:20px;"></i></div>
+          <span class="story-card-label">Modern Workplace</span>
+          <h2 class="story-card-title">Connected Work Environments</h2>
+          <p class="story-card-desc">Smart office spaces designed for productivity, collaboration, and seamless connectivity.</p>
+        </div>
+      </div>
+
+      <div id="card-collaboration" class="hero-story-card">
+        <div class="story-card-inner">
+          <div class="story-card-icon"><i data-lucide="users" style="width:20px;height:20px;"></i></div>
+          <span class="story-card-label">Collaboration</span>
+          <h2 class="story-card-title">Collaboration Environments</h2>
+          <p class="story-card-desc">Hybrid meeting rooms and boardrooms equipped with enterprise AV and video conferencing.</p>
+        </div>
+      </div>
+
+      <div id="card-systems" class="hero-story-card">
+        <div class="story-card-inner">
+          <div class="story-card-icon"><i data-lucide="layers" style="width:20px;height:20px;"></i></div>
+          <span class="story-card-label">AV & ELV Systems</span>
+          <h2 class="story-card-title">Integrated Infrastructure Control</h2>
+          <p class="story-card-desc">Digital signage, building management, lighting control, and smart security systems.</p>
+        </div>
+      </div>
+
+      <div id="card-connected" class="hero-story-card">
+        <div class="story-card-inner">
+          <div class="story-card-icon"><i data-lucide="cpu" style="width:20px;height:20px;"></i></div>
+          <span class="story-card-label">Connected Intelligence</span>
+          <h2 class="story-card-title">Connected Intelligent Environment</h2>
+          <p class="story-card-desc">Where every system converges into a unified, intelligent infrastructure.</p>
+        </div>
+      </div>
+
+    </div>
+
     <!-- Scroll indicator at the bottom -->
     <div class="scroll-indicator fade-up-animate" style="animation-delay: 0.7s;">
       <div class="scroll-mouse">
         <div class="scroll-wheel"></div>
       </div>
-      <span>Scroll</span>
+      <span>Scroll to Explore</span>
     </div>
 
   </section>
@@ -179,7 +219,7 @@
                 <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Structured Cabling (Cat6A / Fiber)</li>
                 <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> High-Density Enterprise Wi-Fi</li>
                 <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Secure Switching & Routing</li>
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Redundant Network Architectures</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Custom Mounting, Enclosures & Racks</li>
               </ul>
               <a href="services.html?tab=ict" class="solution-card-link">
                 <span>Explore ICT Infrastructure</span> 
@@ -203,9 +243,9 @@
             <div class="solution-card-details">
               <p class="solution-card-desc">Advanced home and building automation systems for centralized control.</p>
               <ul class="solution-card-features">
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Centralized Smart Lighting</li>
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Intelligent Climate (HVAC) Control</li>
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Smart Shades & Motorized Blinds</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Centralized Smart Lighting & Climate</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Building Management Systems (BMS)</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Electromechanical, Control & AMC</li>
                 <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Energy Management Systems</li>
               </ul>
               <a href="services.html?tab=automation" class="solution-card-link">
@@ -257,10 +297,10 @@
             <div class="solution-card-details">
               <p class="solution-card-desc">Bespoke technological integrations tailored to specific experiences.</p>
               <ul class="solution-card-features">
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Premium Home Cinema Design</li>
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Interactive Smart Classrooms</li>
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Hybrid Video Conferencing Rooms</li>
-                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Multi-display Training Facilities</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Professional Golf Simulators & TrackMan</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Acoustic & Interior Fit-Out Solutions</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Bespoke Home Cinema & Private Theaters</li>
+                <li><i data-lucide="check" style="width: 14px; height: 14px;"></i> Smart Classrooms & Video Conferencing</li>
               </ul>
               <a href="services.html?tab=specialized" class="solution-card-link">
                 <span>Explore Specialized Solutions</span> 
@@ -489,17 +529,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo-link footer-brand-logo">
-            <div class="logo-icon">
-              <div class="logo-shape-1"></div>
-              <div class="logo-shape-2"></div>
-            </div>
-            <div class="logo-text">
-              <span class="logo-title">ABC</span>
-              <span class="logo-subtitle">TECHNOLOGIES</span>
+          <a href="index.html" class="logo-link footer-brand-logo" aria-label="Nexora Global">
+            <div class="logo-img-wrapper">
+              <img src="logo/nexora-logo.png" alt="Nexora Global" class="site-logo">
             </div>
           </a>
-          <p class="footer-brand-tagline">System Integrators & Service Providers in UAE. Premium AV, ELV, and ICT solutions for every environment.</p>
+          <p class="footer-brand-tagline">System Integrators &amp; Service Providers in UAE. Premium AV, ELV, and ICT solutions for every environment.</p>
           <div class="footer-socials">
             <a href="#" class="social-btn" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
             <a href="#" class="social-btn" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
@@ -524,13 +559,15 @@
             <li class="footer-link"><a href="services.html?tab=av">AV Solutions</a></li>
             <li class="footer-link"><a href="services.html?tab=elv">ELV Systems</a></li>
             <li class="footer-link"><a href="services.html?tab=ict">ICT Solutions</a></li>
+            <li class="footer-link"><a href="services.html?tab=automation">Smart Automation</a></li>
+            <li class="footer-link"><a href="services.html?tab=specialized">Specialized Solutions</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Contact</h4>
           <ul class="footer-links">
-            <li class="footer-link"><a href="mailto:info@abctech.ae">info@abctech.ae</a></li>
+            <li class="footer-link"><a href="mailto:info@nexoraglobal.ae">info@nexoraglobal.ae</a></li>
             <li class="footer-link"><a href="tel:+97140000000">+971 4 000 0000</a></li>
             <li class="footer-link"><a href="contact.html">Dubai, UAE</a></li>
           </ul>
@@ -538,7 +575,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="footer-year">2026</span> ABC Tech. All rights reserved.</p>
+        <p>&copy; <span id="footer-year">2026</span> Nexora Global. All rights reserved.</p>
         <div class="footer-bottom-links">
           <a href="#" class="footer-bottom-link">Privacy Policy</a>
           <a href="#" class="footer-bottom-link">Terms of Service</a>
@@ -551,8 +588,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="js/main.js?v=5.9"></script>
-  <script src="js/animations.js?v=5.9"></script>
+  <script src="js/hero-sequence.js?v=6.0"></script>
+  <script src="js/main.js?v=6.0"></script>
+  <script src="js/animations.js?v=6.0"></script>
   <script>lucide.createIcons();</script>
   <script>
     // Failsafe: if after 1.5 seconds the hero is still invisible (e.g. CDN script block), force show it
